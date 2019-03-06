@@ -31,6 +31,9 @@ def header_text_to_id(header_text):
     header_id = re.sub(punctuation_regexp, '', header_id)
     header_id = re.sub(' ', '-', header_id)
 
+    if header_id == "anchor-permanence":
+        return "anchors"
+
     return header_id
 
 
